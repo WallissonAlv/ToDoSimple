@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /*
  * Welcome my web application! This API was builded with those configurations
  * 
- * Tecnologies:
- * - Java Developement Kit 1.8 version
+ * Technologies:
+ * - Java Development Kit 1.8 version
  * - Spring Boot 2.7.12
  * - Starter Data JPA
  * - H2 Database
