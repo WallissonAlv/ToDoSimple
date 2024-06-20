@@ -1,4 +1,4 @@
-# To Do SImple
+# To Do Simple
 This is my first repository working alone, I'm very exciting...
 
 ## Tecnologies
