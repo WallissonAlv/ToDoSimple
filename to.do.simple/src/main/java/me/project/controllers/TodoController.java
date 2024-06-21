@@ -51,14 +51,14 @@ public class TodoController {
 		Todo updatedTodo = todoService.saveOrUpdate(todo);
 		return ResponseEntity.ok(updatedTodo);
 	}
-	@DeleteMapping //Delete a Todo
+	@DeleteMapping("/{id}") //Delete a Todo
 	public void deleteTodoById(Long id) {
 		todoService.deleteTodo(id);
 		ResponseEntity.ok(id);
 	}
-	/*@DeleteMapping // Clear all Todos
+	@DeleteMapping // Clear all Todos
 	public void clearTodos() {
 		todoService.clearAllTodos();
 		todoService.findAllTodos();
-	}*/
+	}
 }

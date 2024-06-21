@@ -51,11 +51,15 @@ public class UserController {
 		User updatedUser = userService.saveOrUpdate(user);
 		return ResponseEntity.ok(updatedUser);
 	}
-	@DeleteMapping
-	public void deleteUser(Long id) {
+	@DeleteMapping("/{id}")
+	public void deleteUser(@PathVariable Long id) {
 		userService.deleteUser(id);
 		ResponseEntity.ok(id);
 	}
-	
+	@DeleteMapping
+	public void deleteAllUser() {
+		userService.deleteAllUsers();
+		ResponseEntity.ok();
+	}
 	// ACCESS METHOD --------------------------------
 }

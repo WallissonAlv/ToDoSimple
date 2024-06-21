@@ -21,8 +21,12 @@ public class Todo {
 	private int priority;
 
 	// PRINCIPALS METHODS----------------------------
-	
-	
+	public Todo(String title, String description, boolean completed, int priority) {
+		this.title = title;
+		this.description = description;
+		this.completed = completed;
+		this.priority = priority;
+	}
 	// ACCESS METHODS -------------------------------
 	public User getUser() {
 		return user;

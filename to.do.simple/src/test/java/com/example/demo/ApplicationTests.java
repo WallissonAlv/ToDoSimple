@@ -5,9 +5,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class ApplicationTests {
-
+	
 	@Test
-	void contextLoads() {
+	void testCreateTodoSucess() {
 	}
 
+	@Test
+	void testCreateTodoFailure() {
+	}
 }
