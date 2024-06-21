@@ -18,6 +18,7 @@ public class Todo {
 	@ManyToOne
 	private User user;
 	private boolean completed;
+	private int priority;
 
 	// PRINCIPALS METHODS----------------------------
 	
@@ -53,4 +54,11 @@ public class Todo {
 	public void setCompleted(boolean completed) {
 		this.completed = completed;
 	}
+	public int getPriority() {
+		return priority;
+	}
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+	
 }

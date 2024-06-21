@@ -3,6 +3,7 @@ package me.project.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import me.project.models.Todo;
@@ -21,7 +22,8 @@ public class TodoService {
 	}
 	
 	public List<Todo> findAllTodos(){
-		return todoRepository.findAll();
+		List<Todo> todo = todoRepository.findAll(Sort.by("priority").and(Sort.by("name")));
+		return todo;
 	}
 	public Todo findTodoById(Long id) {
 		return todoRepository.findById(id).orElse(null);
