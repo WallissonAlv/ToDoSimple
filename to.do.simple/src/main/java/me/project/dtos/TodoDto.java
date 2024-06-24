@@ -1,34 +1,24 @@
-package me.project.models;
+package me.project.dtos;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+public class TodoDto {
 
-@Entity(name = "tb_todo")
-public class Todo {
-
-	// ATTRIBUTES -----------------------------------
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private String description;
-	@ManyToOne
-	private User user;
 	private boolean completed;
 	private int priority;
-
-	// PRINCIPALS METHODS----------------------------
-
-	// ACCESS METHODS -------------------------------
-	public User getUser() {
-		return user;
+	
+	
+	public TodoDto(Long id, String title, String description, boolean completed, int priority) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.description = description;
+		this.completed = completed;
+		this.priority = priority;
 	}
-	public void setUser(User user) {
-		this.user = user;
-	}
+
+	
 	public Long getId() {
 		return id;
 	}
@@ -59,5 +49,4 @@ public class Todo {
 	public void setPriority(int priority) {
 		this.priority = priority;
 	}
-	
 }

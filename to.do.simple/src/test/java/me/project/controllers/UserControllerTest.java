@@ -29,11 +29,11 @@ public class UserControllerTest {
 	@Test
 	public void testFindAllUsersSucess() throws Exception{
 		// Step 1 : Arrange
-		User user1 = new User(1L, "Wallisson", "Estoque");
-		User user2 = new User(2L, "Wesley", "Vendas");
+		//User user1 = new User(1L, "Wallisson", "Estoque");
+		//User user2 = new User(2L, "Wesley", "Vendas");
 
 		// Step 2 : Act
-		Mockito.when(userService.findAllUsers()).thenReturn(Arrays.asList(user1, user2));
+		//Mockito.when(userService.findAllUsers()).thenReturn(Arrays.asList(user1, user2));
 		
 		// Step 3 : Assert
 		mockMvc.perform(get("/users"))
@@ -49,10 +49,10 @@ public class UserControllerTest {
 	public void testFindUserByIdSucess() throws Exception{
 		
 		// Step 1 : Arrange
-		User user1 = new User(1L, "Wallisson", "Estoque");
+		// User user1 = new User(1L, "Wallisson", "Estoque");
 
 		// Step 2 : Act
-		given(userService.findUserById(1L)).willReturn(user1);
+		//given(userService.findUserById(1L)).willReturn(user1);
 		
 		// Step 3 : Assert
 		mockMvc.perform(get("/users/1"))

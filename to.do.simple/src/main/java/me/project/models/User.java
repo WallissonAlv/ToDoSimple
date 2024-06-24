@@ -16,11 +16,6 @@ public class User {
 	private String sector;
 	
 	// PRINCIPALS METHODS----------------------------
-	public User(Long id, String name, String sector) {
-		this.id = id;
-		this.name = name;
-		this.sector = sector;
-	}
 	
 	// ACCESS METHODS -------------------------------
 	public Long getId() {
